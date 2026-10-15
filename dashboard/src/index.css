@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 246 246 243;
+  --panel: 252 252 251;
+  --ink: 11 11 11;
+  --ink2: 82 81 78;
+  --muted: 130 129 124;
+  --rule: 226 225 219;
+  --brand: 28 92 171;
+  --c1: #2a78d6;
+  --c2: #eb6834;
+  --c3: #1baf7a;
+  --c4: #eda100;
+  --c-muted: #b9b8b2;
+  --grid: #e6e5e0;
+  --axis: #6f6e69;
+  --seq-0: #f3f7fd;
+  --seq-1: #1c5cab;
+  color-scheme: light;
+}
+.dark {
+  --surface: 20 20 19;
+  --panel: 30 30 28;
+  --ink: 255 255 255;
+  --ink2: 195 194 183;
+  --muted: 150 149 140;
+  --rule: 60 60 56;
+  --brand: 57 135 229;
+  --c1: #3987e5;
+  --c2: #d95926;
+  --c3: #199e70;
+  --c4: #c98500;
+  --c-muted: #6b6a64;
+  --grid: #3a3a36;
+  --axis: #a8a79e;
+  --seq-0: #22272f;
+  --seq-1: #6da7ec;
+  color-scheme: dark;
+}
+
+html, body { background: rgb(var(--surface)); color: rgb(var(--ink)); }
+body { font-feature-settings: "tnum" 1; }
+
+.panel { @apply min-w-0 rounded-xl border border-rule bg-panel p-4 shadow-sm; }
+.panel-title { @apply text-sm font-semibold text-ink; }
+.panel-sub { @apply mt-0.5 text-xs text-ink2; }
+.badge { @apply inline-flex items-center rounded-full border border-rule px-2 py-0.5 text-[11px] text-ink2; }
+.tbl { @apply w-full border-collapse text-left text-xs; }
+.tbl th { @apply sticky top-0 border-b border-rule bg-panel px-2 py-1.5 font-semibold text-ink2; }
+.tbl td { @apply border-b border-rule/60 px-2 py-1.5 align-top text-ink; }
+.focus-ring { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1; }
+
+.recharts-cartesian-grid line { stroke: var(--grid); }
+.recharts-cartesian-axis-tick-value { fill: var(--axis); font-size: 11px; }
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line { stroke: var(--grid); }
+.recharts-legend-item-text { color: rgb(var(--ink2)) !important; font-size: 11px; }

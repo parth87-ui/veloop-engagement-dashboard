@@ -1,0 +1,11 @@
+metric,test,p_value,effect_size,effect_measure,interpretation
+active days (active users),Kruskal-Wallis,0.5245,0.0,epsilon²,No statistically detectable difference at α=0.05
+sessions (active users),Kruskal-Wallis,0.6051,0.0,epsilon²,No statistically detectable difference at α=0.05
+feature diversity (active users),Kruskal-Wallis,0.3499,0.0007,epsilon²,No statistically detectable difference at α=0.05
+engagement score (active users),Kruskal-Wallis,0.2495,0.0019,epsilon²,No statistically detectable difference at α=0.05
+session duration (sessions),Kruskal-Wallis,0.002621,0.0018,epsilon²,Statistically detectable but negligible effect size
+events per valid session,Kruskal-Wallis,0.1558,0.0004,epsilon²,No statistically detectable difference at α=0.05
+hours to first activity,Kruskal-Wallis,0.4303,0.0,epsilon²,No statistically detectable difference at α=0.05
+activation,Chi-square,0.3388,0.0869,Cramér's V,No statistically detectable difference at α=0.05
+D7 return,Chi-square,0.2888,0.0899,Cramér's V,No statistically detectable difference at α=0.05
+task completion (resolved tasks),Chi-square,0.3687,0.0266,Cramér's V,No statistically detectable difference at α=0.05

@@ -1,0 +1,5 @@
+daypart,sessions,events,meaningful_events,avg_session_duration_s,task_completion_rate_pct,hours_in_bucket,pct_sessions,sessions_per_hour_of_bucket
+Morning (05-11),2315,10508,3032,52.49,61.15,7,29.26,330.71
+Afternoon (12-16),1684,7719,2256,51.5,60.77,5,21.28,336.8
+Evening (17-20),1257,5366,1573,52.12,60.93,4,15.89,314.25
+Night (21-04),2657,12094,3510,51.28,61.58,8,33.58,332.12

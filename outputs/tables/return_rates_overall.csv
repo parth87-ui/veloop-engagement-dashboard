@@ -1,0 +1,5 @@
+window,days_after_first_active_day,eligible_users,returned_users,return_rate_pct
+D1,1,976,142,14.5
+D7,1–7,910,430,47.3
+D14,8–14,845,384,45.4
+D30,24–30,716,299,41.8

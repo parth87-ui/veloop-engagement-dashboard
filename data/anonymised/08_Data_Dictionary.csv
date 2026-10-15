@@ -1,0 +1,27 @@
+dataset,field_name,data_type,definition,requirement,validation,analytical_use
+Users,user_id,String,Unique simulated user identifier,Required,Unique/non-null,User joins
+Users,registration_datetime,Datetime,Simulated account registration time,Required,Valid datetime,Lifecycle
+Users,acquisition_source,Category,Simulated acquisition source,Required,Controlled list,Acquisition analysis
+Users,primary_device,Category,Primary simulated device,Required,Controlled list,Device analysis
+Users,account_status,Category,Simulated account state,Required,Controlled list,Lifecycle
+Sessions,session_id,String,Unique simulated session identifier,Required,Unique/non-null,Session joins
+Sessions,session_start,Datetime,Session start timestamp,Required,Valid datetime,Session analysis
+Sessions,session_end,Datetime,Session end timestamp,Required,>= start,Session analysis
+Sessions,session_duration_seconds,Integer,Session duration,Required,>=0,Session analysis
+Sessions,entry_point,Category,Simulated session entry location,Required,Controlled list,Journey analysis
+Sessions,exit_feature,Category,Last/exit feature recorded for session,Required,Controlled list,Journey analysis
+Events,event_id,String,Unique simulated event identifier,Required,Unique/non-null,Event joins
+Events,event_datetime,Datetime,Event timestamp,Required,Valid datetime,Time analysis
+Events,feature_name,Category,Feature associated with event,Required,Controlled list,Feature analysis
+Events,event_name,Category,Specific behavioral event,Required,Controlled list,Journey/funnel
+Events,event_status,Category,Event outcome/state,Required,Controlled list,Completion analysis
+Events,sequence_number,Integer,Simulated event sequence within session,Required,>=1,Journey analysis
+Daily Activity,activity_date,Date,Date of simulated user activity,Required,Valid date,Trend/cohort
+Daily Activity,session_count,Integer,Sessions represented on that day,Required,>=0,Engagement
+Daily Activity,event_count,Integer,Events recorded on that day,Required,>=0,Engagement
+Tasks,activity_id,String,Unique task activity record,Required,Unique/non-null,Task joins
+Tasks,task_category,Category,Simulated task category,Required,Controlled list,Task analysis
+Tasks,task_status,Category,Task outcome,Required,Controlled list,Task funnel
+Tasks,failure_reason,Category,Reason associated with failed/abandoned task,Conditional,Controlled values,Friction
+Milestones,milestone_type,Category,Behavioral milestone reached,Required,Controlled list,Lifecycle
+Milestones,milestone_datetime,Datetime,Milestone timestamp,Required,Valid datetime,Lifecycle

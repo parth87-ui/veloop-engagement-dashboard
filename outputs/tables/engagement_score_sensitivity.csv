@@ -1,0 +1,10 @@
+scenario,description,spearman_vs_base,top_decile_overlap_pct,bottom_decile_overlap_pct
+Equal weights,All six components weighted 1/6,0.996,90.8,91.8
+Drop Activity Frequency,"Component removed, remaining weights renormalised",0.9791,88.8,83.7
+Drop Session Frequency,"Component removed, remaining weights renormalised",0.9974,96.9,91.8
+Drop Active-Day Consistency,"Component removed, remaining weights renormalised",0.9881,84.7,94.9
+Drop Feature Diversity,"Component removed, remaining weights renormalised",0.9888,89.8,87.8
+Drop Meaningful Completion,"Component removed, remaining weights renormalised",0.9921,90.8,83.7
+Drop Milestone Progression,"Component removed, remaining weights renormalised",0.9905,89.8,88.8
+PCA (PC1 loadings) weights,"Weights = |PC1 loadings| – frequency 0.18, sessions 0.18, consistency 0.16, diversity 0.17, completion 0.17, progression 0.14",0.998,93.9,93.9
+Percentile-rank transform,Components replaced by percentile ranks,0.9935,89.8,92.9

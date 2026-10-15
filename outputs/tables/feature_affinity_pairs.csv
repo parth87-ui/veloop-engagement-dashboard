@@ -1,0 +1,106 @@
+feature_a,feature_b,sessions_together,support_pct,lift
+Streak Rewards,Watch Ads,763,10.02,1.116
+Missions,Watch Ads,738,9.7,1.07
+CAPTCHA,Watch Ads,738,9.7,1.098
+Mining Rewards,Watch Ads,707,9.29,1.07
+Referral,Watch Ads,705,9.26,1.112
+Tap & Earn,Watch Ads,704,9.25,1.083
+CAPTCHA,Missions,699,9.18,1.153
+Mining Rewards,Missions,692,9.09,1.161
+Spin the Wheel,Watch Ads,688,9.04,1.137
+Level System,Watch Ads,683,8.97,1.109
+CAPTCHA,Streak Rewards,680,8.93,1.132
+Missions,Streak Rewards,672,8.83,1.09
+Daily Reward,Watch Ads,672,8.83,1.08
+CAPTCHA,Mining Rewards,670,8.8,1.154
+Missions,Tap & Earn,665,8.74,1.134
+Missions,Referral,649,8.53,1.135
+CAPTCHA,Tap & Earn,647,8.5,1.133
+CAPTCHA,Referral,646,8.49,1.16
+Mining Rewards,Tap & Earn,641,8.42,1.141
+Mining Rewards,Streak Rewards,640,8.41,1.083
+Daily Reward,Streak Rewards,632,8.3,1.136
+Streak Rewards,Tap & Earn,630,8.28,1.084
+CAPTCHA,Daily Reward,629,8.26,1.15
+Daily Reward,Mining Rewards,628,8.25,1.168
+Referral,Streak Rewards,627,8.24,1.106
+Referral,Tap & Earn,627,8.24,1.163
+Wallet,Watch Ads,624,8.2,1.134
+Mining Rewards,Referral,612,8.04,1.117
+Missions,Spin the Wheel,612,8.04,1.121
+CAPTCHA,Level System,609,8.0,1.125
+Daily Reward,Tap & Earn,603,7.92,1.14
+Daily Reward,Missions,603,7.92,1.074
+Spin the Wheel,Tap & Earn,602,7.91,1.17
+Spin the Wheel,Streak Rewards,599,7.87,1.107
+Level System,Streak Rewards,597,7.84,1.084
+Level System,Missions,589,7.74,1.06
+Level System,Mining Rewards,587,7.71,1.102
+Mining Rewards,Spin the Wheel,586,7.7,1.121
+CAPTCHA,Spin the Wheel,585,7.69,1.1
+Level System,Referral,585,7.69,1.145
+Daily Reward,Level System,582,7.65,1.161
+Level System,Tap & Earn,579,7.61,1.105
+Streak Rewards,Wallet,576,7.57,1.171
+Daily Reward,Referral,571,7.5,1.107
+CAPTCHA,Wallet,568,7.46,1.175
+Daily Reward,Spin the Wheel,559,7.34,1.135
+Tap & Earn,Wallet,556,7.31,1.189
+Referral,Spin the Wheel,551,7.24,1.098
+Missions,Wallet,549,7.21,1.106
+Level System,Spin the Wheel,547,7.19,1.122
+Leaderboard,Watch Ads,542,7.12,1.128
+Mining Rewards,Wallet,540,7.09,1.135
+Referral,Wallet,534,7.02,1.171
+Leaderboard,Streak Rewards,533,7.0,1.241
+Badges,Watch Ads,532,6.99,1.091
+Exchange Center,Watch Ads,526,6.91,1.162
+Daily Reward,Wallet,518,6.81,1.157
+Badges,Missions,517,6.79,1.176
+Leaderboard,Missions,512,6.73,1.181
+Level System,Wallet,504,6.62,1.137
+Spin the Wheel,Wallet,498,6.54,1.144
+CAPTCHA,Leaderboard,495,6.5,1.172
+Follow & Earn,Watch Ads,492,6.46,1.127
+CAPTCHA,Exchange Center,489,6.42,1.229
+Leaderboard,Tap & Earn,489,6.42,1.197
+Leaderboard,Referral,488,6.41,1.225
+Badges,Streak Rewards,485,6.37,1.113
+Badges,CAPTCHA,482,6.33,1.125
+Exchange Center,Missions,479,6.29,1.173
+Leaderboard,Mining Rewards,478,6.28,1.151
+Daily Reward,Leaderboard,475,6.24,1.215
+Exchange Center,Mining Rewards,474,6.23,1.212
+Badges,Mining Rewards,472,6.2,1.12
+Badges,Spin the Wheel,466,6.12,1.208
+Badges,Referral,465,6.11,1.151
+CAPTCHA,Follow & Earn,461,6.06,1.202
+Exchange Center,Referral,452,5.94,1.205
+Badges,Level System,452,5.94,1.151
+Follow & Earn,Missions,450,5.91,1.143
+Exchange Center,Tap & Earn,447,5.87,1.162
+Follow & Earn,Streak Rewards,447,5.87,1.145
+Badges,Tap & Earn,440,5.78,1.062
+Leaderboard,Level System,439,5.77,1.134
+Leaderboard,Spin the Wheel,437,5.74,1.149
+Daily Reward,Follow & Earn,435,5.72,1.225
+Exchange Center,Spin the Wheel,433,5.69,1.209
+Badges,Daily Reward,430,5.65,1.084
+Exchange Center,Streak Rewards,429,5.64,1.06
+Daily Reward,Exchange Center,429,5.64,1.165
+Follow & Earn,Tap & Earn,427,5.61,1.151
+Exchange Center,Level System,426,5.6,1.168
+Follow & Earn,Level System,422,5.54,1.2
+Follow & Earn,Referral,422,5.54,1.166
+Follow & Earn,Mining Rewards,420,5.52,1.113
+Follow & Earn,Spin the Wheel,397,5.22,1.149
+Badges,Wallet,394,5.18,1.123
+Leaderboard,Wallet,393,5.16,1.137
+Badges,Leaderboard,385,5.06,1.257
+Exchange Center,Wallet,378,4.97,1.161
+Follow & Earn,Wallet,376,4.94,1.197
+Badges,Exchange Center,357,4.69,1.237
+Exchange Center,Leaderboard,337,4.43,1.185
+Follow & Earn,Leaderboard,334,4.39,1.218
+Badges,Follow & Earn,326,4.28,1.172
+Exchange Center,Follow & Earn,316,4.15,1.223

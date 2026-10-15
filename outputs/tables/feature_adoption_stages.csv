@@ -1,0 +1,61 @@
+feature,stage,users,pct_of_active
+Watch Ads,Exposure,836.0,85.0
+Watch Ads,Adoption,836.0,85.0
+Watch Ads,Completion,547.0,55.6
+Watch Ads,Repeat completion,236.0,24.0
+Daily Reward,Exposure,835.0,84.9
+Daily Reward,Adoption,648.0,65.9
+Daily Reward,Completion,648.0,65.9
+Daily Reward,Repeat completion,284.0,28.9
+Streak Rewards,Exposure,832.0,84.6
+Streak Rewards,Adoption,533.0,54.2
+Streak Rewards,Completion,533.0,54.2
+Streak Rewards,Repeat completion,190.0,19.3
+CAPTCHA,Exposure,824.0,83.7
+CAPTCHA,Adoption,824.0,83.7
+CAPTCHA,Completion,527.0,53.6
+CAPTCHA,Repeat completion,175.0,17.8
+Referral,Exposure,811.0,82.4
+Referral,Adoption,715.0,72.7
+Referral,Completion,715.0,72.7
+Referral,Repeat completion,363.0,36.9
+Wallet,Exposure,810.0,82.3
+Wallet,Adoption,,
+Wallet,Completion,,
+Wallet,Repeat completion,,
+Tap & Earn,Exposure,800.0,81.3
+Tap & Earn,Adoption,800.0,81.3
+Tap & Earn,Completion,632.0,64.2
+Tap & Earn,Repeat completion,272.0,27.6
+Mining Rewards,Exposure,799.0,81.2
+Mining Rewards,Adoption,694.0,70.5
+Mining Rewards,Completion,499.0,50.7
+Mining Rewards,Repeat completion,169.0,17.2
+Level System,Exposure,773.0,78.6
+Level System,Adoption,0.0,0.0
+Level System,Completion,0.0,0.0
+Level System,Repeat completion,0.0,0.0
+Missions,Exposure,771.0,78.4
+Missions,Adoption,716.0,72.8
+Missions,Completion,440.0,44.7
+Missions,Repeat completion,142.0,14.4
+Spin the Wheel,Exposure,763.0,77.5
+Spin the Wheel,Adoption,668.0,67.9
+Spin the Wheel,Completion,489.0,49.7
+Spin the Wheel,Repeat completion,163.0,16.6
+Exchange Center,Exposure,720.0,73.2
+Exchange Center,Adoption,,
+Exchange Center,Completion,,
+Exchange Center,Repeat completion,,
+Leaderboard,Exposure,686.0,69.7
+Leaderboard,Adoption,,
+Leaderboard,Completion,,
+Leaderboard,Repeat completion,,
+Follow & Earn,Exposure,685.0,69.6
+Follow & Earn,Adoption,489.0,49.7
+Follow & Earn,Completion,489.0,49.7
+Follow & Earn,Repeat completion,170.0,17.3
+Badges,Exposure,674.0,68.5
+Badges,Adoption,0.0,0.0
+Badges,Completion,0.0,0.0
+Badges,Repeat completion,0.0,0.0

@@ -1,0 +1,16 @@
+Item,Value
+Dataset name,VELOOP Task 02 — User Behavior & Engagement Intelligence
+Purpose,Standalone behavioral dataset for a 22–25 day Data Analyst project.
+Status,SIMULATED / FICTIONAL / FOR ANALYTICAL WORK ONLY
+Population,"1,000 simulated user profiles"
+Analysis period,01 Apr 2026 – 15 Sep 2026
+Users,1000
+Sessions,7913
+Feature Events,35704
+Daily Activity Records,6667
+Task Activity Records,9846
+Milestone Records,4799
+Actual VELOOP production data,"NO. This workbook does not contain actual VELOOP users, sessions, events or production analytics."
+Synthetic data generation,"Programmatically generated with controlled behavioral distributions, timestamps, feature interactions and task outcomes."
+Required wording,Use: 'In the provided simulated dataset...' or 'Within the synthetic sample...'
+Important restriction,"Do not present any calculated metric as actual VELOOP user behavior, retention, engagement, acquisition performance or product performance."

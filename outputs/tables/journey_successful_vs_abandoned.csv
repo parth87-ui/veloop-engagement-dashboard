@@ -1,0 +1,21 @@
+type,journey,sessions
+Successful (≥1 meaningful completion),Session start → Referral → Exit,45
+Successful (≥1 meaningful completion),Session start → Watch Ads → Exit,35
+Successful (≥1 meaningful completion),Session start → Daily Reward → Exit,33
+Successful (≥1 meaningful completion),Session start → Streak Rewards → Exit,31
+Successful (≥1 meaningful completion),Session start → Tap & Earn → Exit,30
+Successful (≥1 meaningful completion),Session start → Spin the Wheel → Exit,19
+Successful (≥1 meaningful completion),Session start → Missions → Exit,17
+Successful (≥1 meaningful completion),Session start → CAPTCHA → Exit,17
+Successful (≥1 meaningful completion),Session start → Follow & Earn → Exit,17
+Successful (≥1 meaningful completion),Session start → Mining Rewards → Exit,14
+Ends on abandon/fail/skip event,Session start → Watch Ads → Exit,29
+Ends on abandon/fail/skip event,Session start → CAPTCHA → Exit,18
+Ends on abandon/fail/skip event,Session start → Missions → Exit,13
+Ends on abandon/fail/skip event,Session start → Level System → Watch Ads → Exit,7
+Ends on abandon/fail/skip event,Session start → Daily Reward → Watch Ads → Exit,6
+Ends on abandon/fail/skip event,Session start → Streak Rewards → CAPTCHA → Exit,6
+Ends on abandon/fail/skip event,Session start → Streak Rewards → Missions → Exit,5
+Ends on abandon/fail/skip event,Session start → CAPTCHA → Watch Ads → Exit,5
+Ends on abandon/fail/skip event,Session start → Missions → Watch Ads → Exit,4
+Ends on abandon/fail/skip event,Session start → CAPTCHA → Missions → Exit,4

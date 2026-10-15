@@ -1,0 +1,2 @@
+users_claiming,pct_active_claiming,users_breaking,pct_active_breaking,users_claim_and_break,users_consecutive_claim_days,pct_claimers_consecutive,max_consecutive_claim_days,claim_events,break_events,break_to_claim_ratio
+533,54.2,545,55.4,338,23,4.3,5,922,919,0.997

@@ -1,0 +1,7 @@
+component,key,weight,transformation,reason,mean_active
+Activity Frequency (active days),c_frequency,0.25,log1p + min-max (P99 cap),Return on separate days is the most direct signal of repeated engagement in the brief.,0.561
+Session Frequency (sessions),c_sessions,0.1,log1p + min-max (P99 cap),"Adds visit intensity, but is ~0.95 rank-correlated with active days, so weighted low to avoid double counting.",0.561
+"Active-Day Consistency (active weeks / observable weeks, floor 4)",c_consistency,0.15,"ratio, capped at 1",Rewards spread-out activity over bursts; partially corrects for tenure differences.,0.445
+Feature Diversity (distinct features with a completion / 11),c_diversity,0.15,ratio,Breadth of value actions; capped by the 11 completable simulated features.,0.51
+Meaningful Completion (meaningful events + completed tasks),c_completion,0.25,log1p + min-max (P99 cap),Completed value actions are what the product rewards; views alone are excluded.,0.723
+Milestone Progression (level_up + badge_earned events),c_progression,0.1,log1p + min-max (P99 cap),"Progression is a consequence of activity, so weighted low to limit redundancy.",0.396

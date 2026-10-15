@@ -1,0 +1,3 @@
+activity_type,sessions,users,mean_events,mean_features,mean_meaningful,median_duration_s,task_records,task_completion_rate_pct,ad_skip_rate_pct,mission_abandon_rate_pct,exposure_share_pct
+New (first active day),1141,984,7.64,4.7,2.26,38.0,3109,61.17,51.13,50.15,36.55
+Returning (later days),6470,825,4.17,3.56,1.2,43.0,6429,61.25,50.0,49.81,36.22

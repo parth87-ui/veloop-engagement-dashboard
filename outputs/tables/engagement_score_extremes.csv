@@ -1,0 +1,21 @@
+user_id,segment,engagement_score,n_active_days,n_sessions,n_events,n_features_completed,n_meaningful,n_tasks_completed,n_level_up,tenure_days,group
+VLUSR000744,High-Frequency Users,96.8,24,31,127,10,36,4,5,83,Top 10
+VLUSR000495,High-Frequency Users,96.0,22,33,114,10,28,8,3,34,Top 10
+VLUSR000308,High-Frequency Users,95.89,23,27,106,10,32,6,3,55,Top 10
+VLUSR000408,High-Frequency Users,95.16,18,28,109,10,33,3,3,25,Top 10
+VLUSR000152,High-Frequency Users,95.08,27,28,121,10,43,5,2,126,Top 10
+VLUSR000106,High-Frequency Users,95.04,26,30,110,10,26,2,3,90,Top 10
+VLUSR000417,High-Frequency Users,94.93,27,31,104,10,33,5,4,128,Top 10
+VLUSR000215,High-Frequency Users,94.76,22,25,109,10,31,8,6,78,Top 10
+VLUSR000024,High-Frequency Users,94.33,23,28,119,10,33,5,5,59,Top 10
+VLUSR000449,High-Frequency Users,94.31,25,29,102,10,30,3,2,77,Top 10
+VLUSR000196,One-Time Users,14.5,1,1,8,1,1,0,0,101,Bottom 10
+VLUSR000778,One-Time Users,17.51,1,3,4,0,0,2,0,125,Bottom 10
+VLUSR000665,One-Time Users,19.06,1,1,4,0,0,3,0,84,Bottom 10
+VLUSR000516,One-Time Users,20.31,1,1,6,0,0,3,0,17,Bottom 10
+VLUSR000126,One-Time Users,20.79,1,1,7,1,1,1,1,126,Bottom 10
+VLUSR000380,One-Time Users,21.37,1,2,3,1,1,3,0,155,Bottom 10
+VLUSR000136,One-Time Users,21.76,1,1,4,0,0,6,0,115,Bottom 10
+VLUSR000067,One-Time Users,22.99,1,1,2,0,0,5,0,63,Bottom 10
+VLUSR000741,Occasional Users,23.26,2,8,2,0,0,1,0,19,Bottom 10
+VLUSR000781,Occasional Users,23.35,2,2,5,1,1,1,0,107,Bottom 10

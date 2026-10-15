@@ -1,0 +1,14 @@
+id,metrics_compared,value_a,value_b,definition_difference,explanation
+REC-M01,Registered users vs active users,"1,000",984,All accounts vs accounts with ≥1 feature event.,16 registered users never opened a session or used a feature.
+REC-M02,One-session users vs one-time (1 active day) users,143,158,≥1 session counted per session vs per calendar day.,"16 users had 2+ sessions, all on the same day: one-time by days, not by sessions."
+REC-M03,Repeat-session rate vs repeat-user rate,85.5% (841/984),83.9% (826/984),≥2 sessions vs ≥2 distinct active days.,Same reason as above (several sessions on one day).
+REC-M04,Repeat-user rate (KPI) vs 'Returned' (funnel),826 users,826 users,Identical rule: ≥2 active days.,Equal by construction – shown to confirm consistency.
+REC-M05,Returned vs Established,826,733,≥2 active days vs meaningful activity on ≥3 days.,Established is the stricter next funnel step.
+REC-M06,Multi-feature: KPI (standalone) vs funnel (cumulative),265 (26.9% of active),235,Meets the breadth rule vs meets it AND every earlier funnel stage.,The funnel only counts multi-feature users who also returned.
+REC-M07,Regular engagement: standalone vs funnel (cumulative),615 (62.5% of active),211,≥3 active weeks vs ≥3 active weeks AND multi-feature AND returned.,Cumulative counts shrink at every stage; standalone counts do not.
+REC-M08,Completed a meaningful activity (ever) vs activation rate,984 users (98.4%),58.8% (530/902),"Any time in the window vs within 14 days of registration, eligible users only.","Most users eventually complete something, but many only after the activation window."
+REC-M09,Repeat-user rate (ever) vs D7 return,83.9%,47.3% (430/910),"Any second active day, ever vs a return within days 1–7 after the first active day.",Returning eventually is far more common than returning within the first week.
+REC-M10,One-time users (all time) vs one-day users in first 30 days,16.1% (158/984),25.0% (179/716),"All active users, lifetime vs users with ≥30 observable days, first 30 days only.",The 30-day version removes right-censoring and is the fairer comparison.
+REC-M11,Sessions per user: registered vs active denominator,7.913,8.042,"Sessions ÷ 1,000 registered vs ÷ active users.",Denominator stated wherever the metric appears.
+REC-M12,Events per session: session-sheet field vs raw events,10.44,4.689,events_in_session field vs clean raw events ÷ valid sessions.,The field does not reconcile with raw events (DQ-016) and is not used anywhere.
+REC-M13,D7 return: first-active anchor vs registration anchor,47.3%,50.3%,Days 1–7 after first active day vs after registration date.,Primary metric uses the first active date; the registration version is a labelled comparison only.

@@ -1,0 +1,6 @@
+active_days_band,<8 features,≥8 features
+0 days,16,0
+1 day,128,30
+2–4 days,256,19
+5–9 days,235,57
+≥10 days,100,159

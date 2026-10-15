@@ -1,0 +1,17 @@
+metric,Multi-session users,Single-session users
+users,841.0,143.0
+mean_feature_types,12.09,10.17
+mean_features_completed,5.79,4.56
+mean_active_days,7.76,1.01
+mean_sessions,9.24,1.0
+mean_session_s,52.01,40.86
+median_session_s,38.0,35.0
+task_completion_rate_pct,61.39,59.91
+daily_reward_claim_users_pct,67.78,54.55
+streak_claim_users_pct,56.36,41.26
+streak_broken_users_pct,57.67,41.96
+mission_completed_users_pct,46.02,37.06
+spin_completed_users_pct,51.72,37.76
+level_up_users_pct,64.45,51.05
+referral_action_users_pct,74.32,62.94
+meaningful_per_session,1.23,8.1

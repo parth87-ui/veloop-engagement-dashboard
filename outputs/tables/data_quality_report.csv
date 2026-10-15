@@ -1,0 +1,74 @@
+issue_id,dataset,check,detail,count,denominator,pct,classification,severity,analytical_impact,action_taken
+DQ-001,Users,Duplicate user_id,,0,1000,0.0,VALID,None,Primary key is unique; safe to join.,None required.
+DQ-002,Users,Nulls in required user fields,,0,1000,0.0,VALID,None,No imputation needed.,None required.
+DQ-003,Users,referral_source_detail null,Nulls among non-Referral users: 846,846,1000,84.6,VALID,None,Field is conditional: populated only for Referral source (all 154 Referral users populated).,Treated as conditional field.
+DQ-004,Users,"Personal fields present (name, email, age, gender, city, state, referral_code)",,7,16,43.75,WARNING,Medium,Not needed for behavioural analysis; exposure risk if published.,Dropped from every processed/analytical/dashboard output; raw workbook git-ignored.
+DQ-005,Users,PDF-specified user fields absent from workbook,"registration_device, operating_system, first_activity_datetime, last_activity_datetime, total_sessions, total_active_days, current_level, xp_balance, total_feature_types_used, total_events, engagement_segment",11,19,57.89,INVESTIGATE,Medium,"Lifecycle fields (first/last activity, totals, level, XP) must be derived from raw logs; current_level and xp_balance cannot be reconstructed exactly.",Derived from sessions/events where possible; level/XP balance marked 'Not supported by available dataset'.
+DQ-006,Users,Registered users with no session,,16,1000,1.6,WARNING,Low,Legitimate 'registered but never active' population; drives registration→login drop-off.,Retained; analysed as zero-activity users.
+DQ-007,Users,platform has a single value ('Web') for all users,,1000,1000,100.0,WARNING,Medium,Platform cannot be analysed as a dimension; Android/iOS appear as 'Web' devices (mobile web?).,Device (primary_device) used as the platform dimension; platform flagged as non-discriminating.
+DQ-008,Users,onboarding_status='Not Started' but user has feature events,,150,153,98.04,INVESTIGATE,Low,onboarding_status does not appear to gate activity; cannot be used as a funnel stage.,Reported descriptively only.
+DQ-009,Users,account_status='Suspended' users with activity,,65,66,98.48,INVESTIGATE,Low,Snapshot status with no timestamp – cannot tell whether activity occurred before suspension.,Retained; status used descriptively only.
+DQ-010,Sessions,Duplicate session_id,,0,7913,0.0,VALID,None,Primary key is unique.,None required.
+DQ-011,Sessions,session_end earlier than session_start,,0,7913,0.0,VALID,None,No impossible session windows.,None required.
+DQ-012,Sessions,Negative session_duration_seconds,,0,7913,0.0,VALID,None,No negative durations.,None required.
+DQ-013,Sessions,session_duration_seconds ≠ end − start,,0,7913,0.0,VALID,None,Duration field is internally consistent.,None required.
+DQ-014,Sessions,Extremely long sessions (> Q3+3·IQR = 176s),,82,7913,1.04,WARNING,Low,Max duration is only 470s; 'long' is relative – no multi-hour sessions exist.,Retained and flagged (is_long_session); listed in anomaly register.
+DQ-015,Sessions,Zero-event sessions (no rows in 03_Feature_Events),events_in_session field for these sessions: mean 8.5,302,7913,3.82,WARNING,Medium,Inflate session counts relative to event-backed activity; deflate events/session if included.,Retained as sessions (login proxy); excluded from per-session behaviour metrics ('valid sessions').
+DQ-016,Sessions,events_in_session ≠ raw event count,,7537,7913,95.25,INVALID,High,Field mean 10.44 vs raw mean 4.51 events/session – using the field would overstate session depth.,Field not used; events/session recomputed from 03_Feature_Events.
+DQ-017,Sessions,features_used_count ≠ raw distinct features,,6750,7913,85.3,INVALID,Medium,Feature breadth per session would be misstated.,Field not used; recomputed from raw events.
+DQ-018,Sessions,Overlapping sessions for the same user,,38,7913,0.48,WARNING,Low,Concurrent sessions are implausible for a single user on one device; minor effect on counts.,Retained and flagged (is_overlapping); impact tested in data-quality impact analysis.
+DQ-019,Sessions,exit_feature null,of which zero-event sessions: 17,466,7913,5.89,WARNING,Low,Exit analysis loses these sessions.,Exit analysis reported from both the field and the last raw event.
+DQ-020,Sessions,exit_feature ≠ feature of last raw event (event-backed sessions),,6674,7162,93.19,INVESTIGATE,Medium,The two possible exit definitions disagree; exit-point conclusions are definition-dependent.,Primary exit = last raw event feature (timestamp-ordered); field reported for comparison.
+DQ-021,Sessions,session_status has a single value ('Completed'),,7913,7913,100.0,WARNING,Low,No abandoned/crashed session signal available.,Field not used analytically.
+DQ-022,Sessions,Task completed after its parent session ended,,5601,5627,99.54,INVESTIGATE,High,Session durations (median 42s) are too short to contain task flows (median 304s start→complete); session duration likely measures only part of the visit.,"Session duration interpreted as 'logged session window', not true time-in-app."
+DQ-023,Sessions,Orphan user_id (not in Users),,0,7913,0.0,VALID,None,Referential integrity holds.,None required.
+DQ-024,Events,Duplicate event_id,,0,35704,0.0,VALID,None,Primary key unique.,None required.
+DQ-025,Events,Null event timestamps / user_id / session_id,,0,35704,0.0,VALID,None,No missing keys or timestamps.,None required.
+DQ-026,Events,Orphan user_id,,0,35704,0.0,VALID,None,-,None required.
+DQ-027,Events,Orphan session_id,,0,35704,0.0,VALID,None,-,None required.
+DQ-028,Events,Event user_id ≠ session user_id,,0,35704,0.0,VALID,None,-,None required.
+DQ-029,Events,Event timestamp outside its session window,,0,35704,0.0,VALID,None,-,None required.
+DQ-030,Events,Event before user registration,,0,35704,0.0,VALID,None,-,None required.
+DQ-031,Events,Repeated identical events (all fields equal except event_id),,17,35704,0.05,WARNING,Low,Slightly inflates event counts for affected features.,"Second+ copies excluded from the clean layer (flagged, not deleted from raw)."
+DQ-032,Events,Same user + timestamp + event_name (any status/session),,140,35704,0.39,WARNING,Low,Possible double-logging; superset of identical events.,Flagged in anomaly register.
+DQ-033,Events,Duplicate sequence_number within a session,,10789,35704,30.22,INVALID,High,sequence_number cannot define event order.,Event order derived from event_datetime (tie-break event_id).
+DQ-034,Events,"sequence_number not monotonic with timestamp (sessions with >2 events, |rho|<0.5)",,3183,5465,58.24,INVALID,High,Mean within-session correlation between sequence and time = -0.001 (≈ random).,sequence_number ignored for journey analysis.
+DQ-035,Events,Completion event with no matching start event in the same session,"pairs: ad_completed←ad_started, spin_completed←spin_started, mission_completed←mission_started, captcha_completed←captcha_started, tap_completed←tap_started, mining_activity←mining_started",4183,5008,83.53,INVESTIGATE,High,Within-session view→start→complete funnels are not reconstructable; event-level start→complete ratios are unreliable.,Feature funnels computed at user level (ever exposed / started / completed).
+DQ-036,Events,Completion timestamp earlier than start timestamp (same session),,423,825,51.27,INVALID,Medium,Impossible event sequences; affects any time-to-complete metric.,Flagged (sequence_anomaly); no time-to-complete metric derived from events.
+DQ-037,Events,Multiple events with identical timestamp in one session,,3384,35704,9.48,WARNING,Low,Order of tied events is ambiguous.,Ties broken by event_id.
+DQ-038,Events,streak_broken logged with event_status='Success',,919,35704,2.57,WARNING,Medium,Status-based success metrics would count a negative state as success.,Stage taxonomy overrides raw status: streak_broken classified as 'negative'.
+DQ-039,Events,Feature names – canonical & consistently capitalised,,15,15,100.0,VALID,None,15 canonical features; no case variants in 03_Feature_Events.,None required.
+DQ-040,Events,PDF example events absent from simulated taxonomy,"user_registered, login, session_started, session_ended, onboarding_started, onboarding_completed, task_viewed, task_started, task_completed, task_failed, referral_registered, referral_activated, withdrawal_page_viewed",13,37,35.14,INVESTIGATE,High,No login/registration/onboarding/session/task events – login is proxied by session existence and task funnels come from 05_Task_Activity.,Proxies documented; missing events added to tracking-gap register.
+DQ-041,Events,Event-to-feature mapping consistent (each event_name maps to one feature),,0,35,0.0,VALID,None,-,None required.
+DQ-042,Tasks,Duplicate activity_id / orphan user / orphan session,,0,9846,0.0,VALID,None,-,None required.
+DQ-043,Tasks,Missing task_viewed_at / task_started_at,,0,9846,0.0,VALID,None,Every task record has view and start timestamps (no view→start drop-off measurable).,Documented as limitation for view→start drop-off.
+DQ-044,Tasks,Completed task without task_completed_at,,0,5627,0.0,VALID,None,-,None required.
+DQ-045,Tasks,task_completed_at null for non-completed statuses,,4219,9846,42.85,VALID,None,Expected: Abandoned/Failed/Pending have no completion time.,None required.
+DQ-046,Tasks,task_started_at before task_viewed_at,,0,9846,0.0,VALID,None,-,None required.
+DQ-047,Tasks,task_completed_at before task_started_at,,0,9846,0.0,VALID,None,-,None required.
+DQ-048,Tasks,Inconsistent task_status / reward_status / failure_reason,,0,9846,0.0,VALID,None,"Status logic is coherent (Completed↔Credited, Pending↔Pending, failures carry a reason).",None required.
+DQ-049,Tasks,Pending tasks older than 7 days at data end,,534,648,82.41,WARNING,Medium,Long-pending validation inflates the 'neither success nor failure' bucket.,Pending excluded from completion-rate denominator; reported separately.
+DQ-050,Milestones,first_login ≠ user's first session_start,,388,389,99.74,INVALID,High,Milestone timestamps cannot be used for lifecycle timing.,Lifecycle milestones re-derived from raw sessions/events.
+DQ-051,Milestones,third_active_day recorded for users with < 3 active days,,82,416,19.71,INVALID,High,Sheet reports 416 users; raw data shows 735 users reached 3 active days.,Milestone counts re-derived from raw activity.
+DQ-052,Milestones,seventh_active_day recorded for users with < 7 active days,,188,421,44.66,INVALID,High,Sheet reports 421 users; raw data shows 424 users reached 7 active days.,Milestone counts re-derived from raw activity.
+DQ-053,Milestones,Milestones for users with no sessions,,40,4799,0.83,INVALID,Medium,Activity milestones without any activity are impossible.,Excluded (milestone sheet not used as a source of truth).
+DQ-054,Milestones,source_event belongs to a different feature than the milestone (e.g. first_spin ← wallet_viewed),,1809,1962,92.2,INVALID,Medium,Milestone provenance is not traceable.,Not used.
+DQ-055,Milestones,Missing session_id,,40,4799,0.83,WARNING,Low,-,Not used.
+DQ-056,Milestones,milestone_value semantics undocumented (uniform 1–100 across all types),,4799,4799,100.0,INVESTIGATE,Low,Cannot interpret value.,Not used.
+DQ-057,Daily Activity,event_count / feature_count ≠ raw events,,0,6667,0.0,VALID,None,Daily table is an exact aggregation of 03_Feature_Events.,Usable for daily event/feature metrics.
+DQ-058,Daily Activity,session_duration_minutes ≠ sum of session durations (±0.1 min),,6559,6662,98.45,INVALID,High,Daily table implies median 3.8 min/day vs 0.75 min/day from sessions.,Field not used; time metrics come from 02_Sessions.
+DQ-059,Daily Activity,session_count ≠ sessions started that day,,57,6662,0.86,WARNING,Low,Small mismatch (sessions spanning midnight).,Session counts from 02_Sessions.
+DQ-060,Daily Activity,User-days with sessions but no daily row,,249,6911,3.6,WARNING,Low,Daily table covers only days with feature events (zero-event sessions excluded).,Active day defined as a day with ≥1 feature event.
+DQ-061,Daily Activity,active_flag has a single value ('Yes'),,6667,6667,100.0,WARNING,Low,Flag carries no information.,Not used.
+DQ-062,Daily Activity,"Record volume below PDF recommendation (15,000–30,000)",,6667,15000,44.45,INVESTIGATE,Low,Dataset is smaller than the brief's suggested size; does not invalidate analysis.,Documented as source discrepancy.
+DQ-063,Feature Usage,07_Feature_Usage ≠ recomputation from raw events (users/events/sessions),,0,15,0.0,VALID,None,Reference table reconciles with raw events.,Raw events used as primary source; 07 used as validation reference.
+DQ-064,Feature Usage,users_with_success_event ≠ raw users with status 'Success',,0,15,0.0,VALID,None,Note: 'Success' includes streak_broken (negative) and mining_stopped (neutral).,Completion defined by stage taxonomy rather than raw status.
+DQ-065,Feature Usage,"Sheet is a 15-row aggregate (PDF suggests 8,000–15,000 feature-usage records)",,15,8000,0.19,INVESTIGATE,Low,User-level feature usage must be derived from raw events.,Derived user×feature table built in clean layer.
+DQ-066,Event Audit,Rows in 10_Event_Data_Quality_Audit vs 03_Feature_Events,,10,35704,0.03,WARNING,Low,Audit sheet is the event log with injected quality issues.,03_Feature_Events used as primary source; audit sheet used to test cleaning rules.
+DQ-067,Event Audit,"Duplicated event rows (same event_id, identical content)",,10,35714,0.03,INVALID,Low,Would double-count 10 events if the audit sheet were used.,Deduplicated on event_id in impact test.
+DQ-068,Event Audit,Non-canonical feature names (lower-case variants),"daily reward, leaderboard, missions, wallet, watch ads",5,35714,0.01,INVALID,Low,Would split features into duplicate categories (e.g. 'missions' vs 'Missions').,Normalised via case-insensitive mapping in impact test.
+DQ-069,Event Audit,event_status differs from 03 (e.g. 'success ' with case/whitespace drift),success ,4,35704,0.01,INVALID,Low,Status-based filters would miss these events.,Normalised (strip + title-case) in impact test.
+DQ-070,README / PDF,"Project duration: README says '22–25 day', PDF says '20–24 Days'",Standalone behavioral dataset for a 22–25 day Data Analyst project.,1,1,100.0,INVESTIGATE,Low,Source discrepancy requiring confirmation. No effect on analysis.,PDF treated as the formal requirement; flagged.
+DQ-071,README / PDF,README record counts vs actual sheet rows,,0,6,0.0,VALID,None,README counts reconcile with the workbook.,None required.
+DQ-072,README / PDF,"Recommended volumes vs actual (Sessions 8–15k, Daily 15–30k, Feature Usage 8–15k)",,3,7,42.86,INVESTIGATE,Low,"Sessions 7,913 (below 8,000), Daily 6,667 (below 15,000), Feature Usage 15 rows. Source discrepancy requiring confirmation.",Analysis proceeds on supplied data.
+DQ-073,Data Dictionary,Dictionary fields missing from their dataset,,0,26,0.0,VALID,None,Dictionary covers 26 of the workbook's fields (partial coverage).,Extended in docs/data_dictionary.md.

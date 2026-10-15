@@ -1,0 +1,894 @@
+{
+  "note": "Expected values computed by analysis/pipeline/s21_export.py with pandas. Simulated data.",
+  "cases": [
+    {
+      "name": "source=Direct",
+      "filter": {
+        "sources": [
+          0
+        ]
+      },
+      "expected": {
+        "totalUsers": 194,
+        "activeUsers": 189,
+        "activeDays": 1242,
+        "sessions": 1468,
+        "repeatUserRatePct": 84.7,
+        "multiFeatureRatePct": 26.5,
+        "activationRatePct": 54.1,
+        "d7RatePct": 45.2,
+        "funnel": [
+          194,
+          189,
+          189,
+          189,
+          189,
+          160,
+          139
+        ]
+      }
+    },
+    {
+      "name": "source=Organic Search",
+      "filter": {
+        "sources": [
+          1
+        ]
+      },
+      "expected": {
+        "totalUsers": 258,
+        "activeUsers": 254,
+        "activeDays": 1658,
+        "sessions": 1959,
+        "repeatUserRatePct": 83.9,
+        "multiFeatureRatePct": 24.4,
+        "activationRatePct": 58.1,
+        "d7RatePct": 51.7,
+        "funnel": [
+          258,
+          254,
+          254,
+          254,
+          254,
+          213,
+          187
+        ]
+      }
+    },
+    {
+      "name": "source=Other",
+      "filter": {
+        "sources": [
+          2
+        ]
+      },
+      "expected": {
+        "totalUsers": 97,
+        "activeUsers": 96,
+        "activeDays": 774,
+        "sessions": 924,
+        "repeatUserRatePct": 85.4,
+        "multiFeatureRatePct": 30.2,
+        "activationRatePct": 66.3,
+        "d7RatePct": 48.3,
+        "funnel": [
+          97,
+          96,
+          96,
+          96,
+          96,
+          82,
+          75
+        ]
+      }
+    },
+    {
+      "name": "source=Referral",
+      "filter": {
+        "sources": [
+          3
+        ]
+      },
+      "expected": {
+        "totalUsers": 154,
+        "activeUsers": 151,
+        "activeDays": 1045,
+        "sessions": 1266,
+        "repeatUserRatePct": 80.1,
+        "multiFeatureRatePct": 27.2,
+        "activationRatePct": 59.3,
+        "d7RatePct": 41.2,
+        "funnel": [
+          154,
+          151,
+          151,
+          151,
+          151,
+          121,
+          113
+        ]
+      }
+    },
+    {
+      "name": "source=Social Media",
+      "filter": {
+        "sources": [
+          4
+        ]
+      },
+      "expected": {
+        "totalUsers": 162,
+        "activeUsers": 160,
+        "activeDays": 1050,
+        "sessions": 1248,
+        "repeatUserRatePct": 84.4,
+        "multiFeatureRatePct": 28.7,
+        "activationRatePct": 63.3,
+        "d7RatePct": 44.6,
+        "funnel": [
+          162,
+          160,
+          160,
+          160,
+          160,
+          135,
+          119
+        ]
+      }
+    },
+    {
+      "name": "source=Telegram",
+      "filter": {
+        "sources": [
+          5
+        ]
+      },
+      "expected": {
+        "totalUsers": 60,
+        "activeUsers": 59,
+        "activeDays": 434,
+        "sessions": 502,
+        "repeatUserRatePct": 89.8,
+        "multiFeatureRatePct": 30.5,
+        "activationRatePct": 60.0,
+        "d7RatePct": 57.9,
+        "funnel": [
+          60,
+          59,
+          59,
+          59,
+          59,
+          53,
+          47
+        ]
+      }
+    },
+    {
+      "name": "source=WhatsApp",
+      "filter": {
+        "sources": [
+          6
+        ]
+      },
+      "expected": {
+        "totalUsers": 75,
+        "activeUsers": 75,
+        "activeDays": 464,
+        "sessions": 546,
+        "repeatUserRatePct": 82.7,
+        "multiFeatureRatePct": 25.3,
+        "activationRatePct": 50.7,
+        "d7RatePct": 45.1,
+        "funnel": [
+          75,
+          75,
+          75,
+          75,
+          75,
+          62,
+          53
+        ]
+      }
+    },
+    {
+      "name": "device=Android",
+      "filter": {
+        "devices": [
+          0
+        ]
+      },
+      "expected": {
+        "totalUsers": 675,
+        "activeUsers": 666,
+        "activeDays": 4574,
+        "sessions": 5414,
+        "repeatUserRatePct": 82.9,
+        "multiFeatureRatePct": 26.9,
+        "activationRatePct": 61.1,
+        "d7RatePct": 47.3,
+        "funnel": [
+          675,
+          666,
+          666,
+          666,
+          666,
+          552,
+          490
+        ]
+      }
+    },
+    {
+      "name": "device=Windows",
+      "filter": {
+        "devices": [
+          1
+        ]
+      },
+      "expected": {
+        "totalUsers": 148,
+        "activeUsers": 144,
+        "activeDays": 910,
+        "sessions": 1115,
+        "repeatUserRatePct": 84.7,
+        "multiFeatureRatePct": 26.4,
+        "activationRatePct": 49.6,
+        "d7RatePct": 45.1,
+        "funnel": [
+          148,
+          144,
+          144,
+          144,
+          144,
+          122,
+          109
+        ]
+      }
+    },
+    {
+      "name": "device=iOS",
+      "filter": {
+        "devices": [
+          2
+        ]
+      },
+      "expected": {
+        "totalUsers": 125,
+        "activeUsers": 122,
+        "activeDays": 807,
+        "sessions": 932,
+        "repeatUserRatePct": 86.1,
+        "multiFeatureRatePct": 27.0,
+        "activationRatePct": 61.6,
+        "d7RatePct": 46.2,
+        "funnel": [
+          125,
+          122,
+          122,
+          122,
+          122,
+          105,
+          92
+        ]
+      }
+    },
+    {
+      "name": "device=macOS",
+      "filter": {
+        "devices": [
+          3
+        ]
+      },
+      "expected": {
+        "totalUsers": 52,
+        "activeUsers": 52,
+        "activeDays": 376,
+        "sessions": 452,
+        "repeatUserRatePct": 90.4,
+        "multiFeatureRatePct": 28.8,
+        "activationRatePct": 47.8,
+        "d7RatePct": 55.1,
+        "funnel": [
+          52,
+          52,
+          52,
+          52,
+          52,
+          47,
+          42
+        ]
+      }
+    },
+    {
+      "name": "segment=No Recorded Activity",
+      "filter": {
+        "segments": [
+          0
+        ]
+      },
+      "expected": {
+        "totalUsers": 16,
+        "activeUsers": 0,
+        "activeDays": 0,
+        "sessions": 0,
+        "repeatUserRatePct": null,
+        "multiFeatureRatePct": null,
+        "activationRatePct": 0.0,
+        "d7RatePct": null,
+        "funnel": [
+          16,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "segment=One-Time Users",
+      "filter": {
+        "segments": [
+          1
+        ]
+      },
+      "expected": {
+        "totalUsers": 158,
+        "activeUsers": 158,
+        "activeDays": 158,
+        "sessions": 206,
+        "repeatUserRatePct": 0.0,
+        "multiFeatureRatePct": 19.0,
+        "activationRatePct": 18.4,
+        "d7RatePct": 0.0,
+        "funnel": [
+          158,
+          158,
+          158,
+          158,
+          158,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "segment=Occasional Users",
+      "filter": {
+        "segments": [
+          2
+        ]
+      },
+      "expected": {
+        "totalUsers": 256,
+        "activeUsers": 256,
+        "activeDays": 765,
+        "sessions": 933,
+        "repeatUserRatePct": 100.0,
+        "multiFeatureRatePct": 0.0,
+        "activationRatePct": 45.7,
+        "d7RatePct": 30.0,
+        "funnel": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          167
+        ]
+      }
+    },
+    {
+      "name": "segment=Returning Users",
+      "filter": {
+        "segments": [
+          3
+        ]
+      },
+      "expected": {
+        "totalUsers": 235,
+        "activeUsers": 235,
+        "activeDays": 1578,
+        "sessions": 1843,
+        "repeatUserRatePct": 100.0,
+        "multiFeatureRatePct": 0.0,
+        "activationRatePct": 73.3,
+        "d7RatePct": 59.4,
+        "funnel": [
+          235,
+          235,
+          235,
+          235,
+          235,
+          235,
+          235
+        ]
+      }
+    },
+    {
+      "name": "segment=Multi-Feature Users",
+      "filter": {
+        "segments": [
+          4
+        ]
+      },
+      "expected": {
+        "totalUsers": 76,
+        "activeUsers": 76,
+        "activeDays": 489,
+        "sessions": 672,
+        "repeatUserRatePct": 100.0,
+        "multiFeatureRatePct": 100.0,
+        "activationRatePct": 54.1,
+        "d7RatePct": 54.3,
+        "funnel": [
+          76,
+          76,
+          76,
+          76,
+          76,
+          76,
+          72
+        ]
+      }
+    },
+    {
+      "name": "segment=High-Frequency Users",
+      "filter": {
+        "segments": [
+          5
+        ]
+      },
+      "expected": {
+        "totalUsers": 259,
+        "activeUsers": 259,
+        "activeDays": 3677,
+        "sessions": 4259,
+        "repeatUserRatePct": 100.0,
+        "multiFeatureRatePct": 61.4,
+        "activationRatePct": 84.4,
+        "d7RatePct": 72.2,
+        "funnel": [
+          259,
+          259,
+          259,
+          259,
+          259,
+          259,
+          259
+        ]
+      }
+    },
+    {
+      "name": "feature=Badges",
+      "filter": {
+        "feature": 0
+      },
+      "expected": {
+        "totalUsers": 674,
+        "activeUsers": 674,
+        "activeDays": 5421,
+        "sessions": 6490,
+        "repeatUserRatePct": 87.2,
+        "multiFeatureRatePct": 35.9,
+        "activationRatePct": 64.6,
+        "d7RatePct": 53.0,
+        "funnel": [
+          674,
+          674,
+          674,
+          674,
+          674,
+          588,
+          540
+        ]
+      }
+    },
+    {
+      "name": "feature=CAPTCHA",
+      "filter": {
+        "feature": 1
+      },
+      "expected": {
+        "totalUsers": 824,
+        "activeUsers": 824,
+        "activeDays": 6159,
+        "sessions": 7320,
+        "repeatUserRatePct": 85.6,
+        "multiFeatureRatePct": 32.0,
+        "activationRatePct": 62.7,
+        "d7RatePct": 51.0,
+        "funnel": [
+          824,
+          824,
+          824,
+          824,
+          824,
+          705,
+          646
+        ]
+      }
+    },
+    {
+      "name": "feature=Daily Reward",
+      "filter": {
+        "feature": 2
+      },
+      "expected": {
+        "totalUsers": 835,
+        "activeUsers": 835,
+        "activeDays": 6150,
+        "sessions": 7267,
+        "repeatUserRatePct": 85.6,
+        "multiFeatureRatePct": 31.4,
+        "activationRatePct": 62.0,
+        "d7RatePct": 49.7,
+        "funnel": [
+          835,
+          835,
+          835,
+          835,
+          835,
+          715,
+          654
+        ]
+      }
+    },
+    {
+      "name": "feature=Exchange Center",
+      "filter": {
+        "feature": 3
+      },
+      "expected": {
+        "totalUsers": 720,
+        "activeUsers": 720,
+        "activeDays": 5499,
+        "sessions": 6551,
+        "repeatUserRatePct": 86.0,
+        "multiFeatureRatePct": 34.0,
+        "activationRatePct": 61.9,
+        "d7RatePct": 51.6,
+        "funnel": [
+          720,
+          720,
+          720,
+          720,
+          720,
+          619,
+          571
+        ]
+      }
+    },
+    {
+      "name": "feature=Follow & Earn",
+      "filter": {
+        "feature": 4
+      },
+      "expected": {
+        "totalUsers": 685,
+        "activeUsers": 685,
+        "activeDays": 5470,
+        "sessions": 6544,
+        "repeatUserRatePct": 87.3,
+        "multiFeatureRatePct": 37.5,
+        "activationRatePct": 65.3,
+        "d7RatePct": 52.4,
+        "funnel": [
+          685,
+          685,
+          685,
+          685,
+          685,
+          598,
+          556
+        ]
+      }
+    },
+    {
+      "name": "feature=Leaderboard",
+      "filter": {
+        "feature": 5
+      },
+      "expected": {
+        "totalUsers": 686,
+        "activeUsers": 686,
+        "activeDays": 5412,
+        "sessions": 6445,
+        "repeatUserRatePct": 86.6,
+        "multiFeatureRatePct": 34.7,
+        "activationRatePct": 64.6,
+        "d7RatePct": 53.5,
+        "funnel": [
+          686,
+          686,
+          686,
+          686,
+          686,
+          594,
+          539
+        ]
+      }
+    },
+    {
+      "name": "feature=Level System",
+      "filter": {
+        "feature": 6
+      },
+      "expected": {
+        "totalUsers": 773,
+        "activeUsers": 773,
+        "activeDays": 5917,
+        "sessions": 7029,
+        "repeatUserRatePct": 86.4,
+        "multiFeatureRatePct": 33.1,
+        "activationRatePct": 63.3,
+        "d7RatePct": 51.4,
+        "funnel": [
+          773,
+          773,
+          773,
+          773,
+          773,
+          668,
+          619
+        ]
+      }
+    },
+    {
+      "name": "feature=Mining Rewards",
+      "filter": {
+        "feature": 7
+      },
+      "expected": {
+        "totalUsers": 799,
+        "activeUsers": 799,
+        "activeDays": 6066,
+        "sessions": 7205,
+        "repeatUserRatePct": 87.1,
+        "multiFeatureRatePct": 32.7,
+        "activationRatePct": 63.3,
+        "d7RatePct": 51.8,
+        "funnel": [
+          799,
+          799,
+          799,
+          799,
+          799,
+          696,
+          645
+        ]
+      }
+    },
+    {
+      "name": "feature=Missions",
+      "filter": {
+        "feature": 8
+      },
+      "expected": {
+        "totalUsers": 771,
+        "activeUsers": 771,
+        "activeDays": 5987,
+        "sessions": 7119,
+        "repeatUserRatePct": 87.5,
+        "multiFeatureRatePct": 34.0,
+        "activationRatePct": 65.4,
+        "d7RatePct": 51.9,
+        "funnel": [
+          771,
+          771,
+          771,
+          771,
+          771,
+          675,
+          624
+        ]
+      }
+    },
+    {
+      "name": "feature=Referral",
+      "filter": {
+        "feature": 9
+      },
+      "expected": {
+        "totalUsers": 811,
+        "activeUsers": 811,
+        "activeDays": 6021,
+        "sessions": 7152,
+        "repeatUserRatePct": 85.1,
+        "multiFeatureRatePct": 32.3,
+        "activationRatePct": 62.4,
+        "d7RatePct": 49.5,
+        "funnel": [
+          811,
+          811,
+          811,
+          811,
+          811,
+          690,
+          626
+        ]
+      }
+    },
+    {
+      "name": "feature=Spin the Wheel",
+      "filter": {
+        "feature": 10
+      },
+      "expected": {
+        "totalUsers": 763,
+        "activeUsers": 763,
+        "activeDays": 5919,
+        "sessions": 7027,
+        "repeatUserRatePct": 87.4,
+        "multiFeatureRatePct": 34.3,
+        "activationRatePct": 63.6,
+        "d7RatePct": 51.3,
+        "funnel": [
+          763,
+          763,
+          763,
+          763,
+          763,
+          667,
+          609
+        ]
+      }
+    },
+    {
+      "name": "feature=Streak Rewards",
+      "filter": {
+        "feature": 11
+      },
+      "expected": {
+        "totalUsers": 832,
+        "activeUsers": 832,
+        "activeDays": 6178,
+        "sessions": 7349,
+        "repeatUserRatePct": 87.1,
+        "multiFeatureRatePct": 31.6,
+        "activationRatePct": 63.7,
+        "d7RatePct": 50.1,
+        "funnel": [
+          832,
+          832,
+          832,
+          832,
+          832,
+          725,
+          660
+        ]
+      }
+    },
+    {
+      "name": "feature=Tap & Earn",
+      "filter": {
+        "feature": 12
+      },
+      "expected": {
+        "totalUsers": 800,
+        "activeUsers": 800,
+        "activeDays": 6063,
+        "sessions": 7213,
+        "repeatUserRatePct": 86.9,
+        "multiFeatureRatePct": 32.9,
+        "activationRatePct": 63.1,
+        "d7RatePct": 50.7,
+        "funnel": [
+          800,
+          800,
+          800,
+          800,
+          800,
+          695,
+          632
+        ]
+      }
+    },
+    {
+      "name": "feature=Wallet",
+      "filter": {
+        "feature": 13
+      },
+      "expected": {
+        "totalUsers": 810,
+        "activeUsers": 810,
+        "activeDays": 6003,
+        "sessions": 7123,
+        "repeatUserRatePct": 85.7,
+        "multiFeatureRatePct": 32.0,
+        "activationRatePct": 64.0,
+        "d7RatePct": 50.0,
+        "funnel": [
+          810,
+          810,
+          810,
+          810,
+          810,
+          694,
+          633
+        ]
+      }
+    },
+    {
+      "name": "feature=Watch Ads",
+      "filter": {
+        "feature": 14
+      },
+      "expected": {
+        "totalUsers": 836,
+        "activeUsers": 836,
+        "activeDays": 6209,
+        "sessions": 7371,
+        "repeatUserRatePct": 85.5,
+        "multiFeatureRatePct": 31.5,
+        "activationRatePct": 62.1,
+        "d7RatePct": 50.4,
+        "funnel": [
+          836,
+          836,
+          836,
+          836,
+          836,
+          715,
+          657
+        ]
+      }
+    },
+    {
+      "name": "date=July 2026",
+      "filter": {
+        "dayFrom": 91,
+        "dayTo": 121
+      },
+      "expected": {
+        "totalUsers": 1000,
+        "activeUsers": 493,
+        "activeDays": 1286,
+        "sessions": 1426,
+        "repeatUserRatePct": 64.9,
+        "multiFeatureRatePct": 26.9,
+        "activationRatePct": 58.8,
+        "d7RatePct": 47.3,
+        "funnel": [
+          1000,
+          984,
+          984,
+          984,
+          984,
+          826,
+          733
+        ]
+      }
+    },
+    {
+      "name": "device=Android + date=July 2026",
+      "filter": {
+        "devices": [
+          0
+        ],
+        "dayFrom": 91,
+        "dayTo": 121
+      },
+      "expected": {
+        "totalUsers": 675,
+        "activeUsers": 339,
+        "activeDays": 894,
+        "sessions": 1005,
+        "repeatUserRatePct": 66.7,
+        "multiFeatureRatePct": 26.9,
+        "activationRatePct": 61.1,
+        "d7RatePct": 47.3,
+        "funnel": [
+          675,
+          666,
+          666,
+          666,
+          666,
+          552,
+          490
+        ]
+      }
+    }
+  ]
+}

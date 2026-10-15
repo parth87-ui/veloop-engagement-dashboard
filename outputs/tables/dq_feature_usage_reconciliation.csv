@@ -1,0 +1,16 @@
+feature_name,unique_users,total_events,sessions_with_feature,users_with_success_event,events_per_user,sessions_per_user,unique_users_raw,total_events_raw,sessions_raw,success_users_raw,users_match,events_match,sessions_match,success_users_match
+Badges,674,1832,1538,506,2.72,2.28,674,1832,1538,506.0,True,True,True,True
+CAPTCHA,824,2733,2120,527,3.32,2.57,824,2733,2120,527.0,True,True,True,True
+Daily Reward,835,2499,1963,648,2.99,2.35,835,2499,1963,648.0,True,True,True,True
+Exchange Center,720,1690,1428,0,2.35,1.98,720,1690,1428,0.0,True,True,True,True
+Follow & Earn,685,1659,1377,489,2.42,2.01,685,1659,1377,489.0,True,True,True,True
+Leaderboard,686,1836,1516,0,2.68,2.21,686,1836,1516,0.0,True,True,True,True
+Level System,773,2427,1944,615,3.14,2.51,773,2427,1944,615.0,True,True,True,True
+Mining Rewards,799,2616,2085,698,3.27,2.61,799,2616,2085,698.0,True,True,True,True
+Missions,771,2780,2176,440,3.61,2.82,771,2780,2176,440.0,True,True,True,True
+Referral,811,2521,2000,715,3.11,2.47,811,2521,2000,715.0,True,True,True,True
+Spin the Wheel,763,2425,1909,489,3.18,2.5,763,2425,1909,489.0,True,True,True,True
+Streak Rewards,832,2734,2157,740,3.29,2.59,832,2734,2157,740.0,True,True,True,True
+Tap & Earn,800,2654,2051,632,3.32,2.56,800,2654,2051,632.0,True,True,True,True
+Wallet,810,2172,1736,0,2.68,2.14,810,2172,1736,0.0,True,True,True,True
+Watch Ads,836,3126,2412,547,3.74,2.89,836,3126,2412,547.0,True,True,True,True

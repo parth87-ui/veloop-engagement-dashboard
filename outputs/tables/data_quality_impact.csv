@@ -1,0 +1,30 @@
+scenario,metric,before_cleaning,after_cleaning,absolute_change,percent_change,conclusion_changes,explanation
+Duplicate events (17 identical copies),Total events,35704.0,35687.0,-17.0,-0.05,No,0.05% of events; immaterial.
+Duplicate events (17 identical copies),Events per active user,36.285,36.267,-0.017,-0.05,No,Immaterial at population level.
+Duplicate events (17 identical copies),Top-5 feature ranking identical (1 = yes),1.0,1.0,0.0,0.0,No,Feature popularity ranking unchanged.
+"Audit sheet used as-is (duplicates, case variants)",Distinct feature labels,20.0,15.0,-5.0,-25.0,Yes (if uncorrected),Lower-case variants create 5 phantom features.
+"Audit sheet used as-is (duplicates, case variants)",Event rows,35714.0,35704.0,-10.0,-0.03,No,10 duplicated rows double-count a handful of events.
+"Audit sheet used as-is (duplicates, case variants)",Events with status 'Success',14430.0,14430.0,0.0,0.0,No,Offsetting errors: 4 duplicated 'Success' rows are added while the drifted statuses ('success ') drop out of exact-match filters – the totals agree only by coincidence.
+Session-sheet counters (events_in_session),Events per session,10.436,4.689,-5.748,-55.07,Yes,Field overstates session depth by >2×; session depth conclusions would be wrong.
+Session-sheet counters (features_used_count),Distinct features per session,3.215,3.733,0.518,16.1,Partly,Field understates breadth relative to raw events.
+Zero-event sessions included vs excluded,Events per session,4.51,4.689,0.179,3.97,No,Small (~4%) dilution.
+Zero-event sessions included vs excluded,Sessions per active user,8.042,7.735,-0.307,-3.82,No,Small dilution.
+Overlapping sessions removed,Total sessions,7913.0,7875.0,-38.0,-0.48,No,0.5% of sessions.
+Overlapping sessions removed,Median session duration (s),42.0,42.0,0.0,0.0,No,Unchanged.
+Milestone sheet vs raw derivation,Users reaching first_login,389.0,984.0,595.0,152.96,Yes,Milestone sheet is not consistent with raw activity.
+Milestone sheet vs raw derivation,Users reaching first_task_completion,403.0,981.0,578.0,143.42,Yes,Milestone sheet is not consistent with raw activity.
+Milestone sheet vs raw derivation,Users reaching third_active_day,416.0,735.0,319.0,76.68,Yes,Milestone sheet is not consistent with raw activity.
+Milestone sheet vs raw derivation,Users reaching seventh_active_day,421.0,424.0,3.0,0.71,Yes,Milestone sheet is not consistent with raw activity.
+Daily-activity duration field vs sessions,Mean minutes per active user-day,4.795,0.989,-3.806,-79.38,Yes,Daily field implies ~5 min/day vs ~1 min/day from session windows.
+Require a preceding start in the same session (strict funnel),Countable completions (6 start/complete pairs),5621.0,618.0,-5003.0,-89.01,Yes,Strict sequence logic would discard most completions – conclusions about completion volume depend entirely on the linkage rule; user-level 'ever completed' logic is used instead.
+streak_broken logged as 'Success',Users with a successful streak event,740.0,533.0,-207.0,-27.97,Yes,Status-based success would count users who only broke a streak.
+Simulated: 2% of events lose timestamps and are dropped,Mean active days per active user,6.775,6.767,-0.008,-0.12,No,Active-day metrics are robust to small random loss.
+Simulated: 2% of events lose timestamps and are dropped,One-time users (1 active day),158.0,158.0,0.0,0.0,No,Slight shift only.
+Simulated: 2% of events lose user_id,Active users,984.0,984.0,0.0,0.0,No,Active-user counts barely move because users have many events.
+Stress test: top user's events duplicated 20×,Total events,35687.0,38176.0,2489.0,6.97,Yes (volume),Event volume inflated by one user.
+Stress test: top user's events duplicated 20×,Mean events per active user,36.267,38.797,2.529,6.97,Yes (mean),Means are fragile to a single duplicated user.
+Stress test: top user's events duplicated 20×,Median events per active user,31.0,31.0,0.0,0.0,No,Medians are robust – reason medians are reported alongside means.
+Stress test: top user's events duplicated 20×,Feature event-count rank correlation (Spearman),1.0,0.982,-0.018,-1.79,Partly,Event-count popularity is distorted (top feature Watch Ads → Watch Ads); user-count based adoption metrics are unaffected.
+Stress test: top user's events duplicated 20×,Unique users of top feature,836.0,836.0,0.0,0.0,No,Unique-user metrics are immune to duplication.
+Stress test: top user's events duplicated 20×,That user's engagement score,72.79,74.588,1.798,2.47,No,"P99 winsorisation caps count components, so duplication barely moves the score."
+Stress test: top user's events duplicated 20×,Median engagement score (active users),54.665,54.563,-0.102,-0.19,No,Population score robust.

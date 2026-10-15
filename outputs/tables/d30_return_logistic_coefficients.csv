@@ -1,0 +1,19 @@
+feature,standardised_coefficient,odds_ratio_per_sd
+w1_events,-0.858,0.424
+w1_sessions,0.572,1.772
+log_hours_to_first_activity,-0.524,0.592
+w1_active_days,0.514,1.672
+w1_meaningful,0.384,1.468
+w1_streak_or_daily,-0.302,0.739
+calendar_day_first_active,0.239,1.27
+w1_task_completion_rate,0.183,1.201
+w1_features_completed,-0.159,0.853
+device_macOS,0.133,1.142
+source_Referral,0.131,1.14
+device_Windows,0.073,1.076
+source_Telegram,-0.064,0.938
+source_Social Media,0.05,1.051
+source_WhatsApp,-0.032,0.969
+device_iOS,0.016,1.016
+source_Other,0.008,1.008
+source_Organic Search,-0.001,0.999

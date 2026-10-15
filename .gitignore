@@ -1,0 +1,38 @@
+# --- Data privacy -------------------------------------------------------------
+# The raw workbook contains simulated personal fields (names, emails, age, gender,
+# city, state, referral codes). It is never committed. Place it in data/raw/ locally.
+data/raw/*
+!data/raw/.gitkeep
+# data/anonymised/ IS committed: every sheet with personal fields removed, for independent verification.
+# Regenerable user-level analytical layers (PII-free, but not needed in the repo)
+data/processed/*
+!data/processed/.gitkeep
+data/analytical/*
+!data/analytical/.gitkeep
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Node / dashboard ----------------------------------------------------------
+dashboard/node_modules/
+dashboard/dist/
+*.tsbuildinfo
+.vercel
+node_modules/
+dist/
+
+# --- Local tool settings ------------------------------------------------------------
+.claude/
+
+# --- OS / editors ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+~$*.xlsx

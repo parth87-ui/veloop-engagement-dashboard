@@ -1,0 +1,14 @@
+type,entities_flagged,population,pct_flagged,threshold,interpretation,recommended_investigation
+Extremely high event volume (user),0,984,0.0,> 160 events (Q3+3·IQR),Far-out heavy users.,Logging duplication / automation review.
+Unusual activity concentration (events / active day),84,984,8.54,> 19.3 events/day,Bursty users.,Burst review.
+High session event count,103,7611,1.35,> 18 events,Dense sessions.,Event-stream review.
+High event density (events/min),148,7611,1.94,> 27.6 events/min,Rapid-fire sessions.,Rate-pattern review.
+Unusually long session,82,7913,1.04,> 176s,Relative outliers only.,Idle-timeout review.
+Repeated identical events,17,35704,0.05,> 1 identical copy,Double logging.,Client retry logic.
+Excessive repeated event in a session,215,31605,0.68,> 3 of the same event,Repeated firing.,Idempotency review.
+Repeated identical ≥4-event sequences,0,4213,0.0,≥2 sessions with same sequence,Template-like behaviour.,Session comparison.
+Completion before start (same session),423,825,51.27,completion ts < start ts,Ordering defect.,Clock/ordering pipeline.
+Overlapping sessions,38,7913,0.48,start < previous end,Concurrency.,Session-id logic.
+Streak broken without any recorded claim,207,545,37.98,claims = 0,State-logic gap.,Streak state logging.
+Task completion after session end,5601,5627,99.54,completed_at > session_end,Systemic timing mismatch.,Session definition.
+Pending > 30 days,339,648,52.31,> 30 days pending,Validation backlog.,Validation SLA.

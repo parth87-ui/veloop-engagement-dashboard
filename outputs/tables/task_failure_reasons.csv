@@ -1,0 +1,6 @@
+failure_reason,Abandoned,Failed,total
+Validation failed,431,301,732
+Task unavailable,409,313,722
+Timeout,425,285,710
+Incomplete action,404,302,706
+User exited,382,319,701

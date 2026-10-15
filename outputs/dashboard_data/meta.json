@@ -1,0 +1,27 @@
+{
+  "generated_at_utc": "2026-10-15T04:45:36+00:00",
+  "observation_start": "2026-04-01",
+  "observation_end": "2026-09-15",
+  "disclaimer": "All figures are calculated from a fictional, simulated dataset supplied for the VELOOP Data Analyst Internship (Task 02). They do not describe actual VELOOP users, retention, engagement or performance.",
+  "executive_kpis": {
+    "total_users": 1000,
+    "active_users": 984,
+    "sessions": 7913,
+    "active_user_days": 6667,
+    "avg_sessions_per_user": 7.913,
+    "repeat_user_rate_pct": 83.9,
+    "multi_feature_user_rate_pct": 26.9,
+    "activation_rate_pct": 58.8,
+    "activation_window_days": 14
+  },
+  "record_counts": {
+    "users": 1000,
+    "sessions": 7913,
+    "events": 35704,
+    "daily": 6667,
+    "tasks": 9846,
+    "milestones": 4799,
+    "feature_usage_rows": 15,
+    "audit_rows": 35714
+  }
+}

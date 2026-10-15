@@ -1,0 +1,7 @@
+segment,users,mean_active_days,median_active_days,mean_sessions,mean_events,mean_features,mean_features_completed,mean_meaningful,mean_tasks_completed,mean_active_weeks,median_session_s,median_tenure_days,pct_users,task_completion_rate_pct,rule,rationale
+No Recorded Activity,16,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,75.5,1.6,,"0 active days (registered, no feature events)",Separates registration-only accounts so they do not dilute behavioural averages.
+One-Time Users,158,1.0,1.0,1.3,26.21,9.97,4.37,7.7,5.62,1.0,35.5,83.5,15.8,59.9,Exactly 1 active day,"A single active day is the clearest 'did not return' signal (brief, segment A)."
+Occasional Users,256,2.99,3.0,3.64,17.57,9.29,3.67,5.11,5.71,2.4,34.5,80.5,25.6,61.7,2–4 active days and breadth below 8 completed features,Below the median active-user frequency (5 days).
+Returning Users,235,6.71,7.0,7.84,29.31,12.17,5.06,7.9,5.87,4.58,33.0,75.0,23.5,62.3,5–9 active days and breadth below 8 completed features,At or above the median but below the top quartile (10 days).
+Multi-Feature Users,76,6.43,7.0,8.84,52.78,14.34,8.57,16.67,5.76,4.04,41.25,75.5,7.6,61.0,2–9 active days and meaningful completions in ≥8 distinct features,Top-quartile breadth (P75 = 8 features) without top-quartile frequency – broad explorers who are not yet frequent.
+High-Frequency Users,259,14.2,13.0,16.44,62.36,14.35,7.91,18.24,5.64,8.33,50.0,90.0,25.9,60.4,≥10 active days (top quartile of active users),Top quartile of active days (P75 = 10).

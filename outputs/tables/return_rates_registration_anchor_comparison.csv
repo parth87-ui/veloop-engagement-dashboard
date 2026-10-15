@@ -1,0 +1,5 @@
+window,days_after_registration,eligible_users,returned_users,return_rate_pct
+D1,1,994,178,17.9
+D7,1–7,953,479,50.3
+D14,8–14,904,400,44.2
+D30,24–30,816,333,40.8

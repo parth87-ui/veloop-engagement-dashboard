@@ -1,0 +1,97 @@
+sheet,column,dtype,nulls,null_pct,unique_values,top_values_or_range
+01_Users_1000,user_id,object,0,0.0,1000,"1000 distinct ids, e.g. VLUSR000001"
+01_Users_1000,full_name,object,0,0.0,606,[personal field – not profiled]
+01_Users_1000,email,object,0,0.0,1000,[personal field – not profiled]
+01_Users_1000,age,int64,0,0.0,22,[personal field – not profiled]
+01_Users_1000,gender,object,0,0.0,3,[personal field – not profiled]
+01_Users_1000,state,object,0,0.0,18,[personal field – not profiled]
+01_Users_1000,city,object,0,0.0,50,[personal field – not profiled]
+01_Users_1000,registration_datetime,datetime64[ns],0,0.0,1000,min=2026-04-01 02:00:41 | max=2026-09-15 20:26:50
+01_Users_1000,acquisition_source,object,0,0.0,7,Organic Search=258; Direct=194; Social Media=162; Referral=154; Other=97
+01_Users_1000,referral_source_detail,object,846,84.6,1,Friend/Family=154
+01_Users_1000,primary_device,object,0,0.0,4,Android=675; Windows=148; iOS=125; macOS=52
+01_Users_1000,platform,object,0,0.0,1,Web=1000
+01_Users_1000,account_status,object,0,0.0,4,Active=602; Inactive=248; Pending Verification=84; Suspended=66
+01_Users_1000,verification_status,object,0,0.0,2,Verified=851; Pending=149
+01_Users_1000,onboarding_status,object,0,0.0,3,Completed=685; Started=162; Not Started=153
+01_Users_1000,referral_code,object,0,0.0,998,[personal field – not profiled]
+02_Sessions,session_id,object,0,0.0,7913,"7913 distinct ids, e.g. SESS0000001"
+02_Sessions,user_id,object,0,0.0,984,"984 distinct ids, e.g. VLUSR000001"
+02_Sessions,session_start,datetime64[ns],0,0.0,7874,min=2026-04-02 20:14:28 | max=2026-09-15 22:13:22
+02_Sessions,session_end,datetime64[ns],0,0.0,7905,min=2026-04-02 20:16:53 | max=2026-09-15 22:14:12
+02_Sessions,session_duration_seconds,int64,0,0.0,207,min=20 | max=470
+02_Sessions,device,object,0,0.0,4,Android=5414; Windows=1115; iOS=932; macOS=452
+02_Sessions,platform,object,0,0.0,1,Web=7913
+02_Sessions,entry_point,object,0,0.0,6,Direct Feature=1376; Notification=1352; Home=1346; Wallet=1318; Referral Page=1290
+02_Sessions,exit_feature,object,466,5.89,15,Daily Reward=533; Watch Ads=524; Referral=522; Follow & Earn=516; Streak Rewards=509
+02_Sessions,events_in_session,int64,0,0.0,33,7=570; 8=559; 6=545; 5=541; 9=529
+02_Sessions,features_used_count,int64,0,0.0,6,1=1711; 2=1420; 3=1372; 4=1260; 5=1165
+02_Sessions,session_status,object,0,0.0,1,Completed=7913
+03_Feature_Events,event_id,object,0,0.0,35704,"35704 distinct ids, e.g. EVT00000001"
+03_Feature_Events,user_id,object,0,0.0,984,"984 distinct ids, e.g. VLUSR000001"
+03_Feature_Events,session_id,object,0,0.0,7611,"7611 distinct ids, e.g. SESS0000001"
+03_Feature_Events,event_datetime,datetime64[ns],0,0.0,32194,min=2026-04-02 20:14:31 | max=2026-09-15 22:13:50
+03_Feature_Events,feature_name,object,0,0.0,15,Watch Ads=3126; Missions=2780; Streak Rewards=2734; CAPTCHA=2733; Tap & Earn=2654
+03_Feature_Events,event_name,object,0,0.0,35,wallet_viewed=2172; leaderboard_viewed=1836; exchange_viewed=1690; tap_started=1327; tap_completed=1327
+03_Feature_Events,event_status,object,0,0.0,4,Started=18628; Success=14428; Abandoned=1764; Failed=884
+03_Feature_Events,device,object,0,0.0,4,Android=24008; Windows=5328; iOS=4426; macOS=1942
+03_Feature_Events,platform,object,0,0.0,1,Web=35704
+03_Feature_Events,acquisition_source,object,0,0.0,7,Organic Search=8676; Direct=6627; Social Media=5771; Referral=5632; Other=4075
+03_Feature_Events,sequence_number,int64,0,0.0,33,1=5405; 2=4603; 3=4100; 4=3609; 5=3050
+03_Feature_Events,reward_related_flag,object,0,0.0,2,Yes=18834; No=16870
+03_Feature_Events,xp_related_flag,object,0,0.0,2,No=25931; Yes=9773
+04_Daily_Activity,user_id,object,0,0.0,984,"984 distinct ids, e.g. VLUSR000001"
+04_Daily_Activity,activity_date,datetime64[ns],0,0.0,164,min=2026-04-02 00:00:00 | max=2026-09-15 00:00:00
+04_Daily_Activity,session_count,int64,0,0.0,10,1=5991; 2=523; 3=103; 4=24; 5=9
+04_Daily_Activity,session_duration_minutes,float64,0,0.0,249,min=0.8 | max=128.2
+04_Daily_Activity,event_count,int64,0,0.0,62,min=1 | max=120
+04_Daily_Activity,feature_count,int64,0,0.0,15,3=1316; 4=1199; 2=1158; 5=874; 1=665
+04_Daily_Activity,task_count,int64,0,0.0,34,1=1963; 2=1543; 0=1250; 3=928; 4=449
+04_Daily_Activity,completed_task_count,int64,0,0.0,24,0=3769; 1=1789; 2=692; 3=229; 4=73
+04_Daily_Activity,reward_activity_count,int64,0,0.0,43,2=1620; 1=1590; 3=1134; 0=659; 4=654
+04_Daily_Activity,xp_activity_count,int64,0,0.0,29,1=2270; 0=1982; 2=1315; 3=585; 4=259
+04_Daily_Activity,streak_activity,object,0,0.0,2,No=4603; Yes=2064
+04_Daily_Activity,daily_reward_claimed,object,0,0.0,2,No=4764; Yes=1903
+04_Daily_Activity,mission_activity,object,0,0.0,2,No=4605; Yes=2062
+04_Daily_Activity,spin_activity,object,0,0.0,2,No=4839; Yes=1828
+04_Daily_Activity,referral_activity,object,0,0.0,2,No=4754; Yes=1913
+04_Daily_Activity,wallet_activity,object,0,0.0,2,No=4981; Yes=1686
+04_Daily_Activity,active_flag,object,0,0.0,1,Yes=6667
+05_Task_Activity,activity_id,object,0,0.0,9846,"9846 distinct ids, e.g. ACT0000001"
+05_Task_Activity,user_id,object,0,0.0,984,"984 distinct ids, e.g. VLUSR000980"
+05_Task_Activity,task_id,object,0,0.0,80,"80 distinct ids, e.g. TASK0071"
+05_Task_Activity,task_category,object,0,0.0,8,Advertisement=2203; App Task=1327; Survey=1259; CAPTCHA=1143; Social Activity=1020
+05_Task_Activity,task_viewed_at,datetime64[ns],0,0.0,9091,min=2026-04-02 20:14:41 | max=2026-09-15 21:51:41
+05_Task_Activity,task_started_at,datetime64[ns],0,0.0,9768,min=2026-04-02 20:16:07 | max=2026-09-15 21:52:36
+05_Task_Activity,task_completed_at,datetime64[ns],4219,42.85,5616,min=2026-04-02 20:20:46 | max=2026-09-15 21:59:48
+05_Task_Activity,task_status,object,0,0.0,4,Completed=5627; Abandoned=2051; Failed=1520; Pending=648
+05_Task_Activity,failure_reason,object,6275,63.73,5,Validation failed=732; Task unavailable=722; Timeout=710; Incomplete action=706; User exited=701
+05_Task_Activity,reward_status,object,0,0.0,3,Credited=5627; Not Credited=3571; Pending=648
+05_Task_Activity,device,object,0,0.0,4,Android=6656; Windows=1431; iOS=1254; macOS=505
+05_Task_Activity,session_id,object,0,0.0,4612,"4612 distinct ids, e.g. SESS0007786"
+06_Milestones,user_id,object,0,0.0,1000,"1000 distinct ids, e.g. VLUSR000001"
+06_Milestones,milestone_type,object,0,0.0,12,first_feature_use=423; seventh_active_day=421; third_active_day=416; first_referral_activity=406; first_task_completion=403
+06_Milestones,milestone_datetime,datetime64[ns],0,0.0,4452,min=2026-04-02 08:18:00 | max=2026-09-15 22:13:28
+06_Milestones,milestone_value,int64,0,0.0,100,min=1 | max=100
+06_Milestones,source_event,object,0,0.0,36,wallet_viewed=282; leaderboard_viewed=275; exchange_viewed=228; tap_started=181; tap_completed=179
+06_Milestones,session_id,object,40,0.83,3248,"3248 distinct ids, e.g. SESS0000001"
+07_Feature_Usage,feature_name,object,0,0.0,15,Badges=1; CAPTCHA=1; Daily Reward=1; Exchange Center=1; Follow & Earn=1
+07_Feature_Usage,unique_users,int64,0,0.0,15,674=1; 824=1; 835=1; 720=1; 685=1
+07_Feature_Usage,total_events,int64,0,0.0,15,1832=1; 2733=1; 2499=1; 1690=1; 1659=1
+07_Feature_Usage,sessions_with_feature,int64,0,0.0,15,1538=1; 2120=1; 1963=1; 1428=1; 1377=1
+07_Feature_Usage,users_with_success_event,int64,0,0.0,12,0=3; 489=2; 527=1; 506=1; 648=1
+07_Feature_Usage,events_per_user,float64,0,0.0,13,3.32=2; 2.68=2; 2.72=1; 2.35=1; 2.99=1
+07_Feature_Usage,sessions_per_user,float64,0,0.0,15,2.28=1; 2.57=1; 2.35=1; 1.98=1; 2.01=1
+10_Event_Data_Quality_Audit,event_id,object,0,0.0,35704,"35704 distinct ids, e.g. EVT00000001"
+10_Event_Data_Quality_Audit,user_id,object,0,0.0,984,"984 distinct ids, e.g. VLUSR000001"
+10_Event_Data_Quality_Audit,session_id,object,0,0.0,7611,"7611 distinct ids, e.g. SESS0000001"
+10_Event_Data_Quality_Audit,event_datetime,datetime64[ns],0,0.0,32194,min=2026-04-02 20:14:31 | max=2026-09-15 22:13:50
+10_Event_Data_Quality_Audit,feature_name,object,0,0.0,20,Watch Ads=3126; Missions=2780; Streak Rewards=2735; CAPTCHA=2733; Tap & Earn=2654
+10_Event_Data_Quality_Audit,event_name,object,0,0.0,35,wallet_viewed=2172; leaderboard_viewed=1836; exchange_viewed=1691; tap_started=1327; tap_completed=1327
+10_Event_Data_Quality_Audit,event_status,object,0,0.0,5,Started=18632; Success=14430; Abandoned=1764; Failed=884; success =4
+10_Event_Data_Quality_Audit,device,object,0,0.0,4,Android=24011; Windows=5331; iOS=4428; macOS=1944
+10_Event_Data_Quality_Audit,platform,object,0,0.0,1,Web=35714
+10_Event_Data_Quality_Audit,acquisition_source,object,0,0.0,7,Organic Search=8677; Direct=6631; Social Media=5772; Referral=5634; Other=4075
+10_Event_Data_Quality_Audit,sequence_number,int64,0,0.0,33,1=5405; 2=4608; 3=4100; 4=3612; 5=3050
+10_Event_Data_Quality_Audit,reward_related_flag,object,0,0.0,2,Yes=18842; No=16872
+10_Event_Data_Quality_Audit,xp_related_flag,object,0,0.0,2,No=25938; Yes=9776

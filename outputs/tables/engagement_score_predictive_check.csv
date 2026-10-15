@@ -1,0 +1,5 @@
+early_score_quartile,users,mean_later_active_days,returned_after_day_14_pct
+Q1 (lowest),125,2.448,82.4
+Q2,125,2.088,72.0
+Q3,124,3.3548387096774195,83.1
+Q4 (highest),125,5.088,88.8

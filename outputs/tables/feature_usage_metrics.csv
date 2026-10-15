@@ -1,0 +1,16 @@
+feature,feature_area,unique_users,share_of_active_users_pct,total_events,sessions_with_feature,first_feature_users,one_session_users,repeat_users,repeat_usage_rate_pct,repeat_day_users,repeat_day_rate_pct,avg_uses_per_user,median_uses_per_user,exposure_users,adoption_users,adoption_rate_pct,completion_users,completion_user_rate_pct,repeat_completion_users,repeat_completion_rate_pct,depth_mean_completions,depth_median_completions,start_events,complete_events,negative_outcome_events,event_completion_rate_pct,event_abandonment_rate_pct,negative_outcome_type,start_to_complete_event_ratio,view_only
+Watch Ads,Earning Activities,836,85.0,3126,2412,66,292,544,65.1,531,63.5,3.74,3.0,836,836.0,100.0,547.0,65.4,236.0,43.1,1.93,2.0,1007,1054,1065,49.7,50.3,abandonment (skip),1.047,False
+Daily Reward,Habit Rewards,835,84.9,2498,1963,86,329,506,60.6,498,59.6,2.99,3.0,835,648.0,77.6,648.0,77.6,284.0,43.8,1.98,2.0,0,1281,0,,,,,False
+Streak Rewards,Habit Rewards,832,84.6,2734,2157,80,303,529,63.6,519,62.4,3.29,3.0,832,533.0,64.1,533.0,64.1,190.0,35.6,1.73,1.0,0,922,0,,,,,False
+CAPTCHA,Earning Activities,824,83.7,2731,2120,83,328,496,60.2,490,59.5,3.31,3.0,824,824.0,100.0,527.0,64.0,175.0,33.2,1.7,1.0,953,895,883,50.3,49.7,failure,0.939,False
+Referral,Social / Referral,811,82.4,2521,2000,77,326,485,59.8,473,58.3,3.11,2.0,811,715.0,88.2,715.0,88.2,363.0,50.8,2.38,2.0,0,1705,0,,,,,False
+Wallet,Wallet & Exchange,810,82.3,2166,1736,70,346,464,57.3,455,56.2,2.67,2.0,810,,,,,,,,,0,0,0,,,,,True
+Tap & Earn,Earning Activities,800,81.3,2651,2051,89,305,495,61.9,491,61.4,3.31,3.0,800,800.0,100.0,632.0,79.0,272.0,43.0,2.1,2.0,1326,1325,0,,,,0.999,False
+Mining Rewards,Earning Activities,799,81.2,2616,2085,67,313,486,60.8,479,59.9,3.27,3.0,799,694.0,86.9,499.0,62.5,169.0,33.9,1.64,1.0,882,819,0,,,,0.929,False
+Level System,Gamification & Progression,773,78.6,2426,1944,55,306,467,60.4,458,59.2,3.14,3.0,773,0.0,0.0,0.0,0.0,0.0,,,,0,0,0,,,,,False
+Missions,Gamification & Progression,771,78.4,2780,2176,69,254,517,67.1,510,66.1,3.61,3.0,771,716.0,92.9,440.0,57.1,142.0,32.3,1.6,1.0,694,702,699,50.1,49.9,abandonment,1.012,False
+Spin the Wheel,Gamification & Progression,763,77.5,2424,1909,63,298,465,60.9,456,59.8,3.18,2.0,763,668.0,87.5,489.0,64.1,163.0,33.3,1.69,1.0,800,826,0,,,,1.032,False
+Exchange Center,Wallet & Exchange,720,73.2,1689,1428,46,357,363,50.4,354,49.2,2.35,2.0,720,,,,,,,,,0,0,0,,,,,True
+Leaderboard,Gamification & Progression,686,69.7,1835,1516,47,327,359,52.3,353,51.5,2.67,2.0,686,,,,,,,,,0,0,0,,,,,True
+Follow & Earn,Earning Activities,685,69.6,1659,1377,42,329,356,52.0,351,51.2,2.42,2.0,685,489.0,71.4,489.0,71.4,170.0,34.8,1.72,1.0,0,842,0,,,,,False
+Badges,Gamification & Progression,674,68.5,1831,1538,44,325,349,51.8,341,50.6,2.72,2.0,674,0.0,0.0,0.0,0.0,0.0,,,,0,0,0,,,,,False

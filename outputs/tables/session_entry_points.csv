@@ -1,0 +1,7 @@
+entry_point,sessions,valid_share,mean_events,median_duration,meaningful_share,pct_sessions
+Direct Feature,1376,0.962,4.657,42.0,0.67,17.4
+Help/Support,1231,0.965,4.546,43.0,0.69,15.6
+Home,1346,0.958,4.418,43.0,0.66,17.0
+Notification,1352,0.953,4.326,42.0,0.654,17.1
+Referral Page,1290,0.962,4.402,43.0,0.668,16.3
+Wallet,1318,0.97,4.71,41.5,0.656,16.7

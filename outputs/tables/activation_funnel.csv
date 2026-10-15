@@ -1,0 +1,8 @@
+stage,canonical_stage,definition,users,denominator,pct_of_registered,users_standalone,standalone_pct_of_registered,data_source,limitation,pct_of_previous,users_cumulative
+Registered,Registered,User record in 01_Users_1000,1000,1000,100.0,1000,100.0,01_Users_1000,Registration time only; no pre-registration exposure.,100.0,1000
+Logged in,Logged in,≥1 session (login proxied by session existence),984,1000,98.4,984,98.4,02_Sessions,No login event exists in the simulated taxonomy.,98.4,984
+Used a feature,Used a feature,≥1 feature event of any kind,984,1000,98.4,984,98.4,03_Feature_Events,Includes passive views.,100.0,984
+Started an activity,Started an activity,≥1 start event (ad/captcha/spin/mission/tap/mining) or a task start,984,1000,98.4,984,98.4,03 + 05,"Daily Reward, Streak, Follow & Referral have no start event.",100.0,984
+Completed a meaningful activity,Completed a meaningful activity,≥1 meaningful completion (completion event or completed task),984,1000,98.4,984,98.4,03 + 05,Completion cannot be linked to a specific start (DQ-035).,100.0,984
+Returned (2nd active day),Returned (2nd active day),Active on at least 2 distinct calendar days,826,1000,82.6,826,82.6,03_Feature_Events,Right-censored: recent users have had less time to return.,83.9,826
+Established (≥3 meaningful days),Established (≥3 meaningful days),Meaningful activity on at least 3 distinct days,733,1000,73.3,733,73.3,03 + 05,Analyst threshold.,88.7,733

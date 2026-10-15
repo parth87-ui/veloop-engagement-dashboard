@@ -1,0 +1,21 @@
+from,to,transitions,probability
+Watch Ads,Exit,712,0.2458
+Missions,Exit,587,0.2266
+Streak Rewards,Exit,578,0.2242
+CAPTCHA,Exit,562,0.2194
+Mining Rewards,Exit,553,0.2231
+Tap & Earn,Exit,536,0.2156
+Level System,Exit,534,0.2314
+Spin the Wheel,Exit,531,0.2316
+Referral,Exit,530,0.2229
+Daily Reward,Exit,530,0.2262
+Wallet,Exit,483,0.236
+Leaderboard,Exit,395,0.226
+Badges,Exit,386,0.2207
+Exchange Center,Exit,370,0.2271
+Follow & Earn,Exit,324,0.2034
+Watch Ads,Streak Rewards,200,0.069
+Watch Ads,Level System,186,0.0642
+Watch Ads,CAPTCHA,186,0.0642
+Missions,Mining Rewards,184,0.071
+Missions,Watch Ads,183,0.0707
