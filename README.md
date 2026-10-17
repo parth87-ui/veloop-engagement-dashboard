@@ -2,16 +2,16 @@
 
 **Author:** Parth Khandelwal · VELOOP Rewards Data Analyst Internship — Task 02
 
-🔗 **Live dashboard:** https://veloop-data-analyst-task02.vercel.app/ · 📄 **Report:** [`outputs/reports/VELOOP_Task02_User_Behavior_Engagement_Intelligence_Report.pdf`](outputs/reports/VELOOP_Task02_User_Behavior_Engagement_Intelligence_Report.pdf) · 📝 **What changed after review:** [`CHANGES_v2.md`](CHANGES_v2.md)
+🔗 **Live dashboard:** https://veloop-data-analyst-task02.vercel.app/ 
 
-> **Simulated data – not actual VELoop Rewards user data.** Every number in this repository is calculated from a fictional
-> dataset supplied for the Data Analyst task (Task 02). It does **not** describe actual VELoop Rewards users, retention,
+> ** data – VELOOP Rewards — User Behavior & Engagement Intelligence
+
+> dataset supplied for the Data Analyst task (Task 02). It describe actual VELoop Rewards users, retention,
 > engagement, acquisition or product performance. The engagement score is an analyst-created model, not an official
 > VELoop metric, and every experiment is a proposal that has not been run.
 
 **Verify the results yourself:** `python verify_headline_metrics.py` recomputes the headline numbers from the shared
-anonymised dataset (`data/anonymised/`) without using the pipeline code. See [`docs/verification_guide.md`](docs/verification_guide.md).
-
+anonymised dataset (`data/anonymised/`) without using the pipeline code.
 ## Project Overview
 
 An end-to-end product-analytics project: data validation → clean analytical layer → 20+ behavioural analyses → findings,
